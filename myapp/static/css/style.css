@@ -1,0 +1,107 @@
+body {
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#table-container {
+    margin-top: 20px;
+    width: 90%;
+    overflow-x: auto;
+}
+
+#table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: right;
+}
+
+#table th, #table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+#table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+input[type=text] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+
+/* Style adjustments for screen sizes 600px and smaller */
+@media screen and (max-width: 600px) {
+    #table-container {
+        width: 100%;
+    }
+
+    input[type=text] {
+        width: 95%;
+    }
+}
+
+#search-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    margin: auto;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    text-align: right;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.container .form label {
+    display: block;
+    margin-top: 20px;
+}
+
+.container .form input[type="number"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.container .form .button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #0048BA;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.container .form .button:hover {
+    background-color: #002244;
+}
+
+.container p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+

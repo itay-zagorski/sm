@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>מחשבון נקודות</title>
+</head>
+<body>
+    <a href="/">חיפוש</a> 
+    <div id ="topc" class="container">
+        <h1>מחשבון נקודות</h1>
+        <form id="points" class="form">
+            <label for="fat">שומן (גרם):</label>
+            <input type="number" id="fat" name="fat">
+            <label for="protein">חלבון (גרם):</label>
+            <input type="number" id="protein" name="protein">
+            <label for="carbs">פחמימות (גרם):</label>
+            <input type="number" id="carbs" name="carbs">
+            <label for="fiber">סיבים (גרם):</label>
+            <input type="number" id="fiber" name="fiber">
+            <input type="submit" value="חשב" class="button">
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <script  language="JavaScript" type="text/javascript">
+        document.getElementById('points').addEventListener('submit', function(event) {
+
+            event.preventDefault();
+
+            var f = document.getElementById('points');
+ 	        var protein1 = f.protein.value*1;
+ 	        var carbs1 = f.carbs.value*1;
+ 	        var fat1 = f.fat.value*1;
+ 	        var fiber1 = f.fiber.value*1;
+ 	        var points = (protein1 / 10.94) + (carbs1 / 9.17) + (fat1/3.89)- (fiber1 / 12.49); 	        
+
+            //var points = (protein / 10.94) + (carbs / 9.17) + (fat / 3.89) - (fiber / 12.96);
+            document.getElementById('result').innerText = 'Points: ' + points;///.toFixed(5);
+        });
+    </script>
+</body>
+</html>
